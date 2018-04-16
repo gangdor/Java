@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XMLHttpRequest Level 2</title>
+</head>
+<body>
+<h1 onclick="getImage();">클릭해보세요... AJAX로 이미지를 요청하고 출력해요....</h1>
+<script>
+function getImage() {
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'duke_luau.png', true);
+	xhr.responseType = 'blob';
+
+	xhr.onload = function(e) {
+  		if (this.status == 200) {
+    		var blob = this.response; // e.target.response
+
+    		var img = document.createElement('img');
+    		img.width=300;
+    		img.height=300;
+    		img.onload = function(e) { //이미지가 다 읽히면.
+     	 		URL.revokeObjectURL(img.src); 
+    		};  
+    		img.src = URL.createObjectURL(blob);
+    		document.body.appendChild(img);    
+  		}
+	};
+
+	xhr.send();
+}
+</script>
+</body>
+</html>

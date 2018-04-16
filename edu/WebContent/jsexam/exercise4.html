@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<style>
+	#target{
+		font-size: 100px;
+		font-weight:bold; 
+	}
+	#target2{
+		font-size: 100px;
+		font-weight:bold;
+	}
+</style>
+<span id="target">오늘은 </span>
+<span id="target2"></span>
+
+<script>
+var x = new Date();
+var y;
+switch(x.getDay()){
+case 0 : 
+	y="일요일"; 	break;
+case 1 :
+	y="월요일";	break;
+case 2 :
+	y="화요일";	break;
+case 3 :
+	y="수요일";	break;
+case 4 :
+	y="목요일";	break;
+case 5 :
+	y="금요일";	break;
+case 6 :
+	y="토요일";	break;
+}
+var selector = document.getElementById("target");
+selector.style.color = "#"+(parseInt(Math.random()*0xffffff)).toString(16);
+
+var selector2 = document.getElementById("target2");
+selector2.style.color = "#"+(parseInt(Math.random()*0xffffff)).toString(16);
+
+document.getElementById("target2").innerHTML = y;
+</script>
+</body>
+</html>

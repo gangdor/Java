@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+
+var check=true;
+while(check){
+var x = window.prompt("1-9 숫자를 입력하세요.");
+if(1<=x && x<=9){
+	check=false;
+	document.write("<h2>" +x+"단입니다." + "</h2>");
+	document.write("-------------------------");
+	for (var i = 1; i <=9; i++) {
+		//document.write();
+		document.write("<ul><li>" + x+" x "+i +" = " + x*i + "</li></ul>");
+		//document.write();
+	}
+}
+
+	if(x<1 || x>9){
+		alert("1-9의 숫자를 입력하세요.");
+		check=true;
+	}
+}
+	
+</script>
+</body>
+</html>

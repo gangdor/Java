@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="util.js"></script>
+</head>
+<body>
+	<script>
+function cal(){
+		var result=0;
+		for (var i = 0; i < arguments.length; i++) {
+			if(isNaN(arguments[i])) {
+				result = "숫자만 입력하세요";
+				break;
+			}
+			result = result + arguments[i];
+		}
+		return result;
+	}		
+	
+document.write("<h3>"+cal()+"</h3>");
+document.write("<h3>"+cal(10,20,30)+"</h3>");
+document.write("<h3>"+cal(10,'가나다',20)+"</h3>");
+document.write("<h3>"+cal(1,2,3,4,5)+"</h3>");
+
+/* print(cal(), "h3")
+print(cal(10,20,30), "h3")
+print(cal(10,'가나다',20), "h3")
+print(cal(1,2,3,4,5), "h3") */
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="test">This is a heading</h1>
+<script>
+function func(flag){
+	if(flag)
+		document.write("페이지가 적재된 후에 write()를 사용하면 다시 씌여집니다.");
+	else
+		document.getElementById("target").innerHTML = 
+			"페이지가 적재된 후에 write()를 사용하면 다시 씌여집니다.<br>";
+	}
+	document.write("<h2>ㅋㅋㅋㅋㅋ</h2>");
+</script>
+<output id="target"></output>
+	<button type="button" onclick="func(true)">클릭하세요!</button>
+	<button type="button" onclick="func(false)">클릭하세요!</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./util.js"></script>
+</head>
+<body>
+<h1>구구단</h1>
+<button onclick="gugu(1)">1단</button>
+<button onclick="gugu(2)">2단</button>
+<button onclick="gugu(3)">3단</button>
+<button onclick="gugu(4)">4단</button>
+<button onclick="gugu(5)">5단</button>
+<button onclick="gugu(6)">6단</button>
+<button onclick="gugu(7)">7단</button>
+<button onclick="gugu(8)">8단</button>
+<button onclick="gugu(9)">9단</button>
+<output id="head"></output>
+<output id="printgugu"></output>
+
+
+<script>
+var a = document.getElementById("head");
+var b = document.getElementById("printgugu");
+
+function gugu(x){
+		a.innerHTML = "<h2>" +x+"단입니다." + "</h2>";
+		//("-------------------------");
+		for (var i = 1; i <=9; i++) {
+			if(i==1)
+				b.innerHTML = "<ul><li>" + x+" x "+i +" = " + x*i + "</li></ul>";
+			else	
+			b.innerHTML += "<ul><li>" + x+" x "+i +" = " + x*i + "</li></ul>";
+		}
+	}
+</script>
+</body>
+</html>

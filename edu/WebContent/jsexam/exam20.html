@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function Area(){
+}
+Area.version='1.0';
+Area.triangle=function(base, height){
+	return base * height /2 ;
+}
+Area.diamond = function(width, height){
+	return width * height / 2;
+}
+document.writeln('Area클래스의 버전 : ' + Area.version);
+document.writeln('삼각형의 면적 : ' + Area.triangle(5,3));
+var a= new Area();
+document.writeln('마름모의 면적 : ' + Area.diamond(10,2));
+document.writeln('마름모의 면적 : ' + a.diamond(10,2)); //에러임, 정적 멤버는 반드시 생성자의 함수로만 ㄱㄱ
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var loopck=true;
+while(loopck){
+var x = window.prompt("첫번째 숫자를 입력하세요.");
+var y = window.prompt("두번째 숫자를 입력하세요.");
+var z = window.prompt("연산자를 입력하세요.");
+var w;
+var zcheck = true;
+
+if(isNaN(x) || isNaN(y)){
+	alert("숫자를 입력하세요")
+}
+if(z =='+')
+	w=parseInt(x)+parseInt(y);
+else if(z =='-')
+	w=x-y;
+else if(z =='*')
+	w=x*y;
+else if(z =='/')
+	w=x/y;
+else if(z =='%')
+	w=x%y;
+else{
+	alert("+, -, *, /, % 만 입력하세요.");
+	zcheck=false;
+	}
+
+if(zcheck){
+	document.write("<h2>"+x+"와"+y+"의"+ z+"연산 결과는 "+w+"입니다."+"</h2>");
+	loopck=false;
+		}
+}
+</script>
+</body>
+</html>
