@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="resource.VisitorMapper">
+ <select id="selectVisitor"  resultType="model.vo.VisitorVO">
+    select * from visitor
+  </select>
+  <select id="selectByName"  parameterType="java.lang.String" resultType="model.vo.VisitorVO">
+    select * from visitor where name = #{name}
+  </select>
+  
+  <insert id="insertVisitor"  parameterType="model.vo.VisitorVO">
+  insert into visitor (name, writedate, memo)
+  values (#{name}, sysdate, #{memo})
+  </insert>
+</mapper>

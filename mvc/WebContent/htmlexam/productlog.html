@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<style>
+h1{
+	text-align : center;
+}
+button{
+	margin : 20px;
+	padding : 20px;
+	box-shadow : 10px 10px 5px grey;
+	border : none;
+	background-color : LightGoldenrodYellow;
+}
+img{
+	width : 150px;
+	height : 150px;
+}
+div{
+	text-align : center;
+	width : auto;
+	height : auto;
+}
+</style>
+<h1>워킹데드 주인공</h1>
+<hr>
+<div>
+<!-- <form method="get" action="/mvc/clicklog2"> -->
+<button value="p001" name = "productID" onclick="requestAjax(0);"><img src="/edu/images/rick.PNG"></button>
+<button value="p002" name = "productID" onclick="requestAjax(1);"><img src="/edu/images/negan.PNG"></button>
+<button value="p003" name = "productID" onclick="requestAjax(2);"><img src="/edu/images/glenn.PNG"></button>
+<button value="p004" name = "productID" onclick="requestAjax(3);"><img src="/edu/images/maggie.PNG"></button>
+<button value="p005" name = "productID" onclick="requestAjax(4);"><img src="/edu/images/daryl.PNG"></button>
+<br>
+<button value="p006" name = "productID" onclick="requestAjax(5);"><img src="/edu/images/michonne.PNG"></button>
+<button value="p007" name = "productID" onclick="requestAjax(6);"><img src="/edu/images/carl.PNG"></button>
+<button value="p008" name = "productID" onclick="requestAjax(7);"><img src="/edu/images/carol.PNG"></button>
+<button value="p009" name = "productID" onclick="requestAjax(8);"><img src="/edu/images/tara.PNG"></button>
+<button value="p010" name = "productID" onclick="requestAjax(9);"><img src="/edu/images/jesus.PNG"></button>
+<!-- </form> -->
+</div>
+<output id="result"></output>
+<script>
+var target = document.getElementsByTagName("button");
+function requestAjax(num){
+	//var id = value;
+	var test = target[num].value;
+	
+	/* alert("test : "+ test); */
+	var req = new XMLHttpRequest(); //readyState 값 0
+	req.onreadystatechange = function() {		
+		var result = document.getElementById("result");
+		if(req.status == 200 && req.readyState == 4) //readyState 값 3, 값 4 성공하면 4됌
+			result.innerHTML = req.responseText; 
+	}	
+	req.open("GET", "../clicklog2?productID="+ test, true);	//readyState 값 1
+	req.send();	 //readyState 값 2
+}
+</script>
+
+</body>
+</html>
