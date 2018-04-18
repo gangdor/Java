@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>TestController를 POST 방식 요청</h1>
+<hr>
+<a href="/springedu/querystring5.do?testName=aaa&testAge=10&testAddr=bbb">querystring5 요청(Query포함)</a>
+<hr>
+<a href="/springedu/querystring5.do">querystring5 요청(Query제외)</a>
+<hr>
+<form method="get"  action="/springedu/querystring5.do">
+<input type="text" placeholder="이름을 입력하세요" name="testName" required><br>
+<input type="number" placeholder="나이를 입력하세요" name="testAge" required><br>
+<input type="text" placeholder="주소를 입력하세요" name="testAddr" required><br>
+<input type="submit" value="querystring5요청하자">
+</form>
+<hr>
+<form method="post"  action="/springedu/querystring6.do">
+<input type="text" placeholder="이름을 입력하세요" name="testName" required><br>
+<input type="number" placeholder="나이를 입력하세요" name="testAge" required><br>
+<input type="text" placeholder="주소를 입력하세요" name="testAddr" required><br>
+<input type="submit" value="querystring6요청하자">
+</form>
+<hr>
+<form method="post"  action="/springedu/querystring7.do">
+<input type="text" placeholder="이름을 입력하세요" name="testName" required><br>
+<input type="number" placeholder="나이를 입력하세요" name="testAge" required><br>
+<input type="text" placeholder="주소를 입력하세요" name="testAddr" required><br>
+<input type="submit" value="querystring7요청하자">
+</form>
+</body>
+</html>

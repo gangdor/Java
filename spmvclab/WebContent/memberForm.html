@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+
+<body>
+<style>
+h1{
+	text-shadow: 5px 5px 8px gray;
+}
+input{
+	border-radius: 20px;
+	height : 25px;
+	margin-bottom: 10px;
+}
+</style>
+<h1>회원 정보를 입력하십시오.</h1>
+<hr>
+<form method="post" action="/spmvclab/memberSpring.do">
+<input type="text" name="name" size="30px" placeholder="이름을 입력하세요" required><br>
+<input type="text" name="phone" size="30px" placeholder="전화 번호를 입력하세요" required><br>
+<input type="text" name="account" size="30px" placeholder="계정을 입력하세요" required><br>
+<input type="text" name="password" size="30px" placeholder="패스워드를 입력하세요" required><br>
+<br>
+<input type="submit" value="등록">
+<input type="reset" value="재작성">
+</form>
+</body>
+</html>
