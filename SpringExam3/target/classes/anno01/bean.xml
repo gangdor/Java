@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="user"  class="anno01.User">
+	<property name="name" value="홍길동"/>
+	<property name="age"  value="32"/>
+	<property name="hobby" value="등산"/>
+</bean>
+<bean id="myProcess0"  class="anno01.UserShow"/>
+
+<bean id="myProcess1"  class="anno01.UserShow"  autowire="byName"/> <!-- autowire byName은 setter 메서드의 프로퍼티와 같은 것을 맞춰라~ -->
+<!-- UserShow클래스에 user라는 이름의 변수를 찾아서 bean id="user"와 연결 -->
+
+<bean id="myProcess2"  class="anno01.UserShow"  autowire="byType"/> <!-- 같은 객체가 2번이상 발견 되면 에러가 난다. byType보다는 byName을 써라 -->
+<!-- UserShow클래스에 타입이 User로 선언된 변수를 찾아서 bean class="anno11.User"와 연결 -->
+
+<bean id="myProcess3"  class="anno01.UserShow"  autowire="constructor"/> <!-- 생성자를 통해 넣어 주겠다. -->
+<!-- UserShow클래스에 default constructor타입의 bean id="userShow"와 연결 -->
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

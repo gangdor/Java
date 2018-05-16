@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 생성자를 통해 객체 생성을 못하고 클래스에 생성자 내장되어있는 경우에 factory-method를 통해 객체를 생성할 수 있다. -->
+<bean id="test" class="sample4.AbstractTest" factory-method="getInstance"/>
+
+</beans>

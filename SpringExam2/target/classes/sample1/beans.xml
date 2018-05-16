@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- default는 싱글톤이지만 prototype으로 설정하면 객체를 미리 생성하지 않고 부를 때 생성한다. -->
+<bean id="messageBean" class="sample1.MessageBeanImpl" scope="prototype">
+	<constructor-arg>
+		<value>strawberry</value>
+	</constructor-arg>	
+	<property name="cost"> <!-- setter임, getter는 호출할 이유가 없음 -->
+		<value>3000</value>
+	</property>
+</bean>	
+</beans>
+
+
+
+
+
+
